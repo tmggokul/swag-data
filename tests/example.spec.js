@@ -5,9 +5,7 @@ const {LoginPage} = require('./pages/login.page')
 //hooks 
 // - beforeAll, beforeEach, AfterAll, afterEach
 
-test.beforeAll(async ({browser})=> {
-  const context =await browser.newContext()
-})
+
 test.beforeEach(async ()=> {
   const loginData = new LoginPage(page)
 await loginData.loginUser()
@@ -15,8 +13,7 @@ await loginData.loginUser()
 test.afterAll(async ()=> {
 //sigout
 })
-test.afterEach(async ()=> {
-})
+//Removed afterEach Hook from this )
 
 test.afterEach('Login', async ({ browser }) => {
   const page = await context.newPage()
