@@ -13,8 +13,7 @@ await loginData.loginUser()
 test.afterAll(async ()=> {
 //sigout
 })
-test.afterEach(async ()=> {
-})
+//Removed afterEach Hook from this )
 
 test.afterEach('Login', async ({ browser }) => {
   const page = await context.newPage()
