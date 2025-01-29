@@ -8,10 +8,8 @@ const {LoginPage} = require('./pages/login.page')
 test.beforeAll(async ({browser})=> {
   const context =await browser.newContext()
 })
-test.beforeEach(async ()=> {
-  const loginData = new LoginPage(page)
-await loginData.loginUser()
-})
+
+
 test.afterAll(async ()=> {
 //sigout
 })
